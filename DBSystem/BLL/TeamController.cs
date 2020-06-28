@@ -12,6 +12,19 @@ namespace DBSystem.BLL
 {
     public class TeamController
     {
-        
+        public Team FindByTeamID(int id)
+        {
+            using (var context = new ContextFSIS())
+            {
+                return context.Teams.Find(id);
+            }
+        }
+        public List<Team> List()
+        {
+            using (var context = new ContextFSIS())
+            {
+                return context.Teams.ToList();
+            }
+        }
     }
 }
