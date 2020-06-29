@@ -51,21 +51,12 @@
             CssClass="table table-striped" GridLines="Horizontal"
             BorderStyle="None" AllowPaging="True"
             OnPageIndexChanging="List02_PageIndexChanging" PageSize="5">
-
             <Columns>
-                <asp:TemplateField HeaderText="Team ID" Visible="True">
+                <asp:TemplateField HeaderText="Player Name" Visible="True">
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                     <ItemTemplate>
-                        <asp:Label ID="TeamID" runat="server" 
-                            Text='<%# Eval("TeamID") %>'>
-                        </asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Team">
-                    <ItemStyle HorizontalAlign="Left"></ItemStyle>
-                    <ItemTemplate>
-                        <asp:Label ID="TeamName" runat="server" 
-                            Text='<%# Eval("TeamName") %>'>
+                        <asp:Label ID="PlayerFullName" runat="server" 
+                            Text='<%# Eval("PlayerFullName") %>'>
                         </asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
@@ -82,7 +73,7 @@
                     <HeaderStyle HorizontalAlign="Right"></HeaderStyle>
                     <ItemStyle HorizontalAlign="Left"></ItemStyle>
                     <ItemTemplate>
-                         <asp:CheckBox ID="MedicalAlertDetails" runat="server" 
+                         <asp:Label ID="MedicalAlertDetails" runat="server" 
                               Text='<%# Eval("MedicalAlertDetails") %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
