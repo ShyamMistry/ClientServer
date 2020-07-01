@@ -18,5 +18,13 @@ namespace DBSystem.ENTITIES
         public string LastName { get; set; }
         public string EmergencyPhoneNumber { get; set; }
         public string EmailAddress { get; set; }
+
+        public string GuardianFullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
     }
 }
