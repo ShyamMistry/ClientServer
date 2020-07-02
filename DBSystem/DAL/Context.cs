@@ -30,5 +30,8 @@ namespace DBSystem.DAL
     {
         public ContextStarTED() : base("StarTEDDB") { }
 
+        public DbSet<School> Schools { get; set; }
+        public DbSet<Program> Programs { get; set; }
+
     }
 }
