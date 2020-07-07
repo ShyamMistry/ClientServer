@@ -14,7 +14,7 @@ namespace DBSystem.ENTITIES
         [Key]
         public int ProgramID { get; set; }
         public string ProgramName { get; set; }
-        public string DiplomaName { get; set; }
+        public string? DiplomaName { get; set; }
         public string SchoolCode { get; set; }
         public decimal? Tuition { get; set; }
         public decimal? InternationalTuition { get; set; }

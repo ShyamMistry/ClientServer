@@ -60,7 +60,7 @@ namespace WebApp.Exercises
                     List02.Enabled = true;
                     List02.DataSource = info02;
                     List02.DataTextField = nameof(Program.ProgramName);
-                    List02.DataValueField = nameof(Program.ProgramName);
+                    List02.DataValueField = nameof(Program.ProgramID);
                     List02.DataBind();
                     List02.Items.Insert(0, "select...");
 
@@ -81,7 +81,7 @@ namespace WebApp.Exercises
             {
                 try
                 {
-                    string productid = List02.SelectedValue;
+                    string productid = List02.SelectedValue.ToString();
                     Response.Redirect("ProjectCRUD.aspx?page=02&pid=" + productid + "&add=" + "no");
                 }
                 catch (Exception ex)
